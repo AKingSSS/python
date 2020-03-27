@@ -1,12 +1,9 @@
 #!/usr/local/bin/ python3
 # -*- coding:utf-8 -*-
+import re
+
 if __name__ == '__main__':
-    print(bin(10))
-    # 字母数字下划线
-    str1 = "Runoob example...wow!!"
-    str2 = 'exam'
-    print(str1.find(str2, 5))
-
-
-
-
+    s = '给给123werB#'
+    pattern = re.compile(r'[^A-Za-z0-9]')
+    s = re.sub(pattern, "A", s)
+    print(s)
